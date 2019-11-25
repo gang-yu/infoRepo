@@ -1,0 +1,40 @@
+strategy:
+  legal:
+    limit:
+      sellUsdt: true
+      buyUsdt: true
+      minPerCny: 10000
+      sellCoins: [btc,eos,ltc,bch,eth,okb]
+      sellEnable: true
+      buyCoins: [btc,eth,okb]
+      buyEnable: true
+      supply: true
+      ignorePaymentMethodWithoutAlipay: false
+      ignorePaymentMethodWithoutBank: false
+      ignorePaymentMethodWithoutWxpay: false
+      guaranteeAmount: {btc: 0.75}
+      defaultParam: {buyRate: 0.006,sellRate: 0.006}
+      coinParams: {btc: {buyRate: 0.005,sellRate: 0.004},eth: {buyRate: 0.005,sellRate: 0.005}}
+      debug: false
+      money: 200000
+      usdtSellAdd: 0.01
+      usdtBuyAdd: -0.01
+      usdtSellMinMoney: 30000
+      usdtBuyAmount: 50000
+      cancel: false
+service:
+  okex:
+    spot:
+      apiKey: caa180cc-593c-caa180cc-593ccaa180cc-593c
+      secretKey: 748D42CC5605EF748D42CC5605EF
+      passphrase: 666666
+    legal:
+      paymentMethod: aliPay
+      authorization: eyJhbeyJOiJIUzUeyJJ9.eyJeyJkiOiJleDExMDE1NzI1eyJxODYzNTdDREZBMDFCQTMyNURFQ0ExUnVTSSIsInVpZCI6IkFKbXVXOXBeyJhwdUp5UlNyL012aEE9PSIsInN0YSI6MCwibWlkIjowLCJpYXeyJjE1NzI3ODQzMTgsImV4cCI6MTU3MzM4OTExOCwiYmlkIjowLCJkb20iOiJ3d3cub2tleC5tZSIsImlzcyI6Im9rY29pbiIsInN1YiI6IkJENDeyJTE3QjJEQkIxNzc2N0E4RTdBQ0Q1QTeyJUQ4In0.zbhA3KBuJeUVQMSltwWAfez3zg_a-CJeyJNQ4avfaXzaEmXdFlYeW8wysVjamlnk8BKpjWzOQeyJCEthmdSVWQ
+  fix:
+    debug: false
+    quartzTime: 3000
+  message:
+    wechat:
+      wechatAppKey: de6e22deade6e2e3de6e2332396de6e2
+      wechatUserId: 666
