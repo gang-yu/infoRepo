@@ -1,0 +1,21 @@
+server:
+  port: 8888
+  tomcat:
+    accesslog:
+      enabled: true
+      directory: D:/dev_env/logs/dc_trading
+      rotate: true
+      pattern: '%t %a %A %m %U%q %s %D %I %B'
+      buffered: false
+
+spring:
+  logging:
+    config:src/main/resources/logback.xml
+  cloud:
+    config:
+      server:
+        encrypt.enabled: false
+        git:
+          uri: https://github.com/hontest/infoRepo.git
+          searchPaths: config
+          user:hontest
